@@ -1,0 +1,32 @@
+corners = int(input("Ingresa el numero de vertices segun la figura: "))
+vertices = []
+
+
+faces = []
+num_faces = int(input("Ingresa el número de caras de la figura: "))
+for i in range(num_faces):
+    print(f"Cara {i + 1}:")
+    face = input("Ingresa los vértices que forman la cara (separados por comas): ")
+    faces.append(face) 
+
+for i in range(corners):
+    print(f"Vértice {i + 1}:")
+    x = int(input("Ingresa la coordenada x: "))
+    y = int(input("Ingresa la coordenada y: "))
+    z = int(input("Ingresa la coordenada z: "))
+    coordenadas = f"v{x:03}, v{y:03}, v{z:03}"
+    vertices.append(coordenadas)
+
+print("Vertices de la figura geometrica:")
+for i, vertice in enumerate(vertices):
+    print(f"{i + 1}: {vertice}")
+
+
+print("Resumen de la figura geométrica:")
+print("Vértices:")
+for i, vertice in enumerate(vertices):
+    print(f"{i + 1}: {vertice}")
+
+print("Caras:")
+for i, face in enumerate(faces):
+    print(f"Cara {i + 1}: {face}")
